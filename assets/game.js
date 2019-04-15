@@ -80,7 +80,7 @@ cc.Class({
             this.unschedule(this.schedule_cb);
             this.members[this.choose_user.id] = null;
             this.update_members(this.members);
-            this.lbl_btn.string = "Start";
+            this.lbl_btn.string = "START";
             this.btn.interactable = true;
             let item = cc.instantiate(this.node_item);
             item.x = 0;
@@ -96,7 +96,7 @@ cc.Class({
         this.btn.interactable = false;
         this.btn.node.runAction(cc.sequence(cc.delayTime(5.0),cc.callFunc(
             ()=>{
-                this.lbl_btn.string = "End";
+                this.lbl_btn.string = "END";
                 this.btn.interactable = true;
             }
         )))
